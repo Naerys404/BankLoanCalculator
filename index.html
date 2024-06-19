@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calculatrice de prêts bancaires</title>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        #chargement, #resultat {display:none;}
+    </style>
+</head>
+
+<body class='bg-dark'>
+    <main class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-6 mx-auto">
+                
+                <div class="card card-body text-center mt-5">
+                    <h2 class='pb-3 heading'>Calculatrice de prêts bancaires</h2>
+
+                    <form id="formulaire">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-euro-sign"></i></span>
+                                <input type="number" id="montant" placeholder="Montant du prêt" class="form-control">
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                                <input type="number" id="interets" placeholder="Taux d'intérêts" class="form-control">
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                <input type="number" id="annees" placeholder="Nombre d'années" class="form-control">
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type='submit' value="Calculer" class="btn btn-info btn-block">
+                        </div>
+                   
+                    </form>
+                    <!--image pour le chargement -->
+
+                   <div id="loading">
+                        <img src="images/load.gif" alt="chargement" class="mt-5 mb-5">
+                    </div>
+
+                    <div id="resultats">
+                        <h5 class="pt-4">Résultats de votre simulation de prêt</h5>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <span class='input-group-text'>Paiement mensuel</span>
+                            <input type="number" id="paiement-mensuel" class="form-control" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class='input-group-text'>Montant total</span>
+                            <input type="number" id="montant-total" class="form-control" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class='input-group-text'>Montant des intérêts</span>
+                            <input type="number" id="montant-interets" class="form-control" disabled>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            
+            </div>
+            </div>
+        </div>
+          
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
