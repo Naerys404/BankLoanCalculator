@@ -1,4 +1,4 @@
-# BankLoanCalculator
+# :coin: BankLoanCalculator
 ![capture d'écran](https://github.com/Naerys404/BankLoanCalculator/blob/main/images/thumb.bmp)
 ## :pushpin: Version 1.0
 
